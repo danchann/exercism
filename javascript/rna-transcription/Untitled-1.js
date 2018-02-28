@@ -1,8 +1,5 @@
-var DnaTranscriber = function (input) {};
-   
 
-DnaTranscriber.prototype.toRna = function (input) {    
-
+function toRna(input) {
     var result = []; 
     for (var x in input) {
             if (input[x] == 'C') {
@@ -21,4 +18,15 @@ DnaTranscriber.prototype.toRna = function (input) {
     return result.join('');
 };
 
-module.exports = DnaTranscriber;
+toRna('ACGTGGTCTTAA')
+
+
+
+
+
+
+
+
+
+
+

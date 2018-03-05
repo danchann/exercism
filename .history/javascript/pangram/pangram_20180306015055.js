@@ -1,9 +1,10 @@
+function Pangram(input) {
+    this.input = input;  
+};
 
-var reg = /[a-z]/g
-const input = '"Five quacking Zephyrs jolt my wax bed."';
-this.input = input;
-
-var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+Pangram.prototype.isPangram = function (input) {
+    var result;
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz';
     // if empty return false
     if (this.input === ''){
             return false;
@@ -27,4 +28,7 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz';
                 if ((/^[a-z]+$/g).test(input)) { // checks if all lower case
                     return true;       
                 }        
-    }            
+    }           
+} //end of function
+
+module.exports = Pangram;

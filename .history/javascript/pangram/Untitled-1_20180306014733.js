@@ -1,6 +1,6 @@
 
 var reg = /[a-z]/g
-const input = '"Five quacking Zephyrs jolt my wax bed."';
+const input = 'the 1 quick brown fox jumps over the 2 lazy dogs';
 this.input = input;
 
 var alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -13,11 +13,9 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz';
             return false;
         } else if (/\d/.test(this.input)) { // check for digits
             return true;
-        } else if ((/[\x21-\x2F]+/g).test(this.input)) { // check for puntuation
+        } else if ((/[^\x20-\x7E]+/g).test(this.input)) { // check for puntuation and non-ascii
             return true;
-        } else if ((/[^\x20-\x7E]+/g).test(this.input)) { // check non-ascii
-            return true;
-        }          
+        }        
         // checks for missing characters    
         for (var x in alphabet) {
                 if ((this.input.search(alphabet[x])) == -1) {

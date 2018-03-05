@@ -13,7 +13,7 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz';
             return false;
         } else if (/\d/.test(this.input)) { // check for digits
             return true;
-        } else if ((/[\x21-\x2F]+/g).test(this.input)) { // check for puntuation
+        } else if ((/[\x20-\x7E]+/g).test(this.input)) { // check for puntuation
             return true;
         } else if ((/[^\x20-\x7E]+/g).test(this.input)) { // check non-ascii
             return true;

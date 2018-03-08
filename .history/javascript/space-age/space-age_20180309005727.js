@@ -3,7 +3,7 @@ function SpaceAge(seconds) {
 };
 
 SpaceAge.prototype.onEarth = function() {
-    
+
 
 
 }

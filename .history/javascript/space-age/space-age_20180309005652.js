@@ -1,9 +1,9 @@
-function SpaceAge(seconds) {
-    this.seconds = seconds;
+function SpaceAge() {
+
 };
 
 SpaceAge.prototype.onEarth = function() {
-    
+
 
 
 }

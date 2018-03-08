@@ -1,4 +1,4 @@
-var str = 'Okay if like my  spacebar  quite a bit?   ';
+var str = 'This is a statement ending with whitespace      ';
 var result;
 
 

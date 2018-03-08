@@ -1,4 +1,4 @@
-var str = 'Okay if like my  spacebar  quite a bit?   ';
+var str = '   ';
 var result;
 
 
@@ -9,9 +9,9 @@ var result;
             return result; 
     } else if 
     //has a question mark at the end or end with white space
-        ((str.endsWith("?   ") || str.endsWith('?') || str.endsWith(' ')) && str!=='   ' && !str.endsWith("      ")) { 
+        ((tr=='   ' || str.endsWith('?') || str.endsWith(' ')) && !str.includes("    ")) { 
         return 'Sure.';
-    } else if ((str=='   ' || str == '' || str.includes('\t') || str.includes('   ')) && (!str.endsWith("...") && !str.endsWith("    "))) {
+    } else if ((str == '' || str.includes('\t') || str.includes('   ')) && (!str.endsWith("...") && !str.includes("     "))) {
         return "Fine. Be that way!"
     } else {
         return "Whatever."

@@ -26,6 +26,7 @@ Pangram.prototype.isPangram = function (input) {
                 return  true;
             } else if ((/^[a-z0-9.,!?-_\x20-\x7E]*$/gi).test(input)){
                 return true;
+           
             } else {
                 return true;
             }               

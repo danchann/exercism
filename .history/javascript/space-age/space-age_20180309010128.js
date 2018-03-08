@@ -3,10 +3,10 @@ function SpaceAge(seconds) {
 };
 
 SpaceAge.prototype.onEarth = function() {
-    var age = (this.seconds / 31557600).toFixed(2);
+
+
+
 }
-
-
 
 
 
@@ -22,4 +22,3 @@ module.exports = SpaceAge;
    - Saturn: orbital period 29.447498 Earth years
    - Uranus: orbital period 84.016846 Earth years
    - Neptune: orbital period 164.79132 Earth years
-*/

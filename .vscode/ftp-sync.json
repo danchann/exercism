@@ -1,0 +1,24 @@
+{
+    "remotePath": "./home/vscode-sync-files/exercism",
+    "host": "dchome.myvnc.com",
+    "username": "vscode_sync",
+    "password": "#U1v#E",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}

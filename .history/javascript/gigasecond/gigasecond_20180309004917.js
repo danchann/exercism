@@ -6,6 +6,9 @@ function Gigasecond(date) {
 Gigasecond.prototype.date = function () {
     var enddate = new Date(this.startdate.getTime() + this.interval);
     
+    enddate.setSeconds();
+    enddate.setMinutes();
+    enddate.setHours();
     return enddate;
 
 }

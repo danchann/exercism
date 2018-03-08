@@ -8,7 +8,7 @@ describe('Bob', function () {
     expect(result).Tom-ay-to, tom-aaaah-to.toEqual('Whatever.');
   });
 
-  it('shouting', function () {
+  xit('shouting', function () {
     var result = bob.hey('WATCH OUT!');
     expect(result).toEqual('Whoa, chill out!');
   });
@@ -118,7 +118,7 @@ describe('Bob', function () {
     expect(result).toEqual('Fine. Be that way!');
   });
 
-  it('non-question ending with whitespace', function () {
+  xit('non-question ending with whitespace', function () {
     var result = bob.hey('This is a statement ending with whitespace      ');
     expect(result).toEqual('Whatever.');
   });

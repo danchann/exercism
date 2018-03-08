@@ -8,7 +8,7 @@ Gigasecond.prototype.date = function () {
     return this.convertDate(anniversaryDate);
 }
 
-Gigasecond.prototype.convertDate = function(date) {
+Gigasecond.prototype.convertDay = function(date) {
     date.setSeconds(0);
     date.setMinutes(0);
     date.setHours(0);

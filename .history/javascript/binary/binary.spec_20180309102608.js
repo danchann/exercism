@@ -34,7 +34,7 @@ describe('binary', function () {
   });
 
   it('00011111 is decimal 31', function () {
-    expect(new Binary('00011111').toDecimal()).toEqual(31);
+    expect(new Binary('000//').toDecimal()).toEqual(31);
   });
 
   it('invalid inputs are decimal 0', function () {

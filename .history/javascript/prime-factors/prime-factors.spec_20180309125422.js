@@ -28,7 +28,6 @@ describe('primeFactors', function () {
   it('factors 9', function () {
     expect(primeFactors.for(9)).toEqual([3, 3]);
   });
-
   it('factors 27', function () {
     expect(primeFactors.for(27)).toEqual([3, 3, 3]);
   });

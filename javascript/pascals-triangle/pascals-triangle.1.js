@@ -13,9 +13,8 @@ function Triangle(numrow) {
         }
     }
     var lastRow = rows[x-1]
-    //(rows.length == 1 ? lastRow = rows[x] : lastRow = rows[x-1]);
     console.log(rows.forEach(function(e){console.log(e)}))
     console.log("Last Row: " + lastRow)
 }
 
-Triangle(4)
+Triangle(20)

@@ -1,6 +1,9 @@
 class TwoFer {
-  static twoFer( /* Parameters go here */ ) {
-    // Your code here
+  static twoFer( who?: string ) {
+    if (typeof who === 'undefined') 
+      who = 'you';
+    
+    return `One for ${who}, one for me.`
   }
 }
 

@@ -1,10 +1,10 @@
 class HelloWorld {
-    static hello( name: string ) {
+    static hello( name?: string ) {
         // Your code here
-        if (name === undefined) 
+        if (typeof name === 'undefined') 
             name = 'World'
     
-        return `Hello,  ${name}!`
+        return `Hello, ${name}!`
 
     }
 }

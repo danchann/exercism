@@ -5,30 +5,38 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "args": [],
-            "cwd": "${workspaceRoot}",
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "externalConsole": false,
-            "name": "DEBUG",
-            "outDir": "${workspaceRoot}/bin",
-            "preLaunchTask": "compile",
-            "program": "${workspaceRoot}/",
+            "type": "node",
             "request": "launch",
-            "runtimeArgs": [
-                "--nolazy"
-            ],
-            "runtimeExecutable": null,
-            "sourceMaps": true,
-            "stopOnEntry": false,
-            "type": "node"
+            "name": "Launch Program",
+            "program": "${file}"
         },
         {
-            "name": "Attach",
+            "name": "Current TS File",
             "type": "node",
-            "request": "attach",
-            "port": 5858
-        }
+            "request": "launch",
+            "args": ["${relativeFile}"],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jest Tests",
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            "cwd": "${workspaceFolder}/",
+            "internalConsoleOptions": "openOnSessionStart"
+          },
+          {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": ["${relativeFile}"]
+        },
     ]
 }

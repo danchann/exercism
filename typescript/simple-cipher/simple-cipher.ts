@@ -9,11 +9,12 @@ class SimpleCipher {
         this.key = key || generateRandomKey();
     }
 
-    encode( decodeMessage: string ): string {
+    encode( decodeMessage: string): string {
         let encodeMessage = ''
         let arr = decodeMessage.split('')
         let results =[];
-        for (let x in arr) {
+        let x: any
+        for (x in arr) {
             let keyIndex = x % this.key.length;
             let newIndex = alphabet.indexOf(arr[x]) + 
         alphabet.indexOf(this.key[keyIndex]);
@@ -26,8 +27,21 @@ class SimpleCipher {
             return encodeMessage
     }
 
-    decode( /* Parameters go here */ ) {
-        // Your code here
+    decode( simpleCipher: any ): string {
+        let decodeMessage = ''
+        let arr = simpleCipher.split('')
+        let results =[];
+        let x: any
+        for (x in simpleCipher) {
+            var newIndex = alphabet.indexOf(arr[x]) - alphabet.indexOf(this.key[x])
+            if (newIndex < 0) {
+                newIndex += alphabet.length; 
+            }
+              results.push(alphabet[newIndex]);
+            }       
+            decodeMessage = results.join('')
+            return decodeMessage
+
     }
 }
 

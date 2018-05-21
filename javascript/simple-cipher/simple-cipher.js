@@ -51,3 +51,7 @@ function generateRandomKey() {
 }
 
 module.exports = Cipher;
+
+var cipher = new Cipher();
+// cipher.encode('aaaaaaaaaa')
+cipher.decode('abcdefghij')

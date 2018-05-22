@@ -1,56 +1,53 @@
- class RunLengthEncoding {
+class RunLengthEncoding {
 
- static encode(str:any) {
+  static encode(str: string) {
     if (!str) {
       return str
     }
     let x = 0,
-      counter = 1,
-      result = [];
-    str = str.split("");
-    while (str[x] !== undefined) {
-      if (str[x] == " ") {
-        result.push(str[x]);
-        x++;
-        continue;
+      arr = []
+    let counter = 1
+    const result = []
+    arr = str.split("")
+    while (arr[x] !== undefined) {
+      while (arr[x] === str[x + 1]) {
+        counter++
+        x++
       }
-      while (str[x] == str[x + 1]) {
-        counter++;
-        x++;
-      }
-      counter > 1 ? result.push(counter, str[x]) : result.push(str[x]);
-      counter = 1, x++;
+      counter > 1 ? result.push(counter, str[x]) : result.push(str[x])
+      counter = 1, x++
     }
-    return result.join("");
+    return result.join("")
   }
-  
-  static decode(str:any) {
+
+  static decode(str: string) {
     if (!str) {
       return str
     } else if (!/\d/g.test(str)) {
-      return str;
+      return str
     }
     let x = 0,
-      counter = 0,
-      result = [];
-    str = str.split("");
-    while (str[x] !== undefined) {
-      if (str[x] == " ") {
-        result.push(str[x]);
-        x++;
-        continue;
+      arr = []
+    let counter = 0
+    const result = []
+    arr = str.split("")
+    while (arr[x] !== undefined) {
+      if (arr[x] === " ") {
+        result.push(str[x])
+        x++
+        continue
       }
-      while (!isNaN(str[x])) {
-        counter += str[x]
-        x++;
+      let getNum = ''
+      while (Number(arr[x])) {
+        getNum += (arr[x])
+        counter = Number(getNum)
+        x++
       }
-      counter > 1 ? result.push(str[x].repeat(counter)) : result.push(str[x]);
-      counter = 0, x++;
+      counter > 1 ? result.push(str[x].repeat(counter)) : result.push(str[x])
+      counter = 0, x++
     }
-    return result.join("");
+    return result.join("")
   }
 }
 
 export default RunLengthEncoding
-
-RunLengthEncoding.encode('AABBBCCCC')

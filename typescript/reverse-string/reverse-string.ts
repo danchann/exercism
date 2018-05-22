@@ -1,6 +1,6 @@
 class ReverseString {
-    static reverse( /* Parameters go here */ ) {
-        // Your code here
+    static reverse(input: string ) {
+        return input.split("").reverse().join("");
     }
 }
 

@@ -1,5 +1,0 @@
-Sp
-
-
-
-module.exports = SpaceAge;

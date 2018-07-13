@@ -1,5 +1,0 @@
-functi
-
-
-
-module.exports = Binary;

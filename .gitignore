@@ -2,3 +2,6 @@
 .history*
 *node_modules*
 .vscode*
+exercism.exe
+package-lock.json
+javascript/ignore_folder/*
